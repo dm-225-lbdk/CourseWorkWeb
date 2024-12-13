@@ -1,0 +1,6 @@
+@CourseWorkWeb.Server_HostAddress = http://localhost:5146
+
+GET {{CourseWorkWeb.Server_HostAddress}}/api/computers
+Accept: application/json
+
+###

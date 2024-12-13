@@ -1,0 +1,212 @@
+﻿body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #fff;
+    animation: fadeIn 1s ease-out;
+    padding-bottom: 10px;
+}
+
+p {
+    color: #cfcfcf;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-out;
+    padding: 10px 0;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    animation: fadeIn 1.2s ease-out;
+    margin-top: 10px;
+}
+
+    button:hover {
+        background-color: #555;
+    }
+
+.navbar {
+    background-color: #222;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    animation: fadeIn 1.5s ease-out;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+    .navbar a {
+        color: #e0e0e0;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: color 0.3s;
+    }
+
+        .navbar a:hover {
+            color: #ff5722;
+        }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: fadeIn 1.5s ease-out;
+}
+
+    table th, table td {
+        padding: 12px 20px;
+        border: 1px solid #444;
+        text-align: left;
+    }
+
+    table th {
+        background-color: #333;
+        color: #fff;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #2a2a2a;
+    }
+
+    table tr:hover {
+        background-color: #444;
+    }
+
+a {
+    color: #ff5722;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    a:hover {
+        color: #fff;
+    }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+    form label {
+        color: #e0e0e0;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    form input,
+    form button {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #444;
+        background-color: #333;
+        color: white;
+        transition: background-color 0.3s;
+    }
+
+        form input:hover,
+        form button:hover {
+            background-color: #555;
+        }
+
+        form input:focus,
+        form button:focus {
+            outline: none;
+            background-color: #555;
+        }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.scroll-animate {
+    opacity: 0;
+    animation: slideInUp 1s ease-out forwards;
+}
+
+select {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+    select:hover {
+        background-color: #555;
+    }
+
+    select:focus {
+        outline: none;
+        background-color: #555;
+    }
+
+option {
+    background-color: #333;
+    color: #fff;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
