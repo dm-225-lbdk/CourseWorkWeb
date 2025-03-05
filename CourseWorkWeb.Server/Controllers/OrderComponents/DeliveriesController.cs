@@ -23,7 +23,6 @@ namespace CourseWorkWeb.Server.Controllers.OrderComponents
             {
                 return NotFound("No deliveries found");
             }
-
             return Ok(deliveries);
         }
 

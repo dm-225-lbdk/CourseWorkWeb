@@ -34,7 +34,6 @@ namespace CourseWorkWeb.Server.Controllers.OrderComponents
             return computer;
         }
 
-
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteComputer(Guid id)
         {
@@ -82,8 +81,7 @@ namespace CourseWorkWeb.Server.Controllers.OrderComponents
             }
 
             return Ok(computers);
+
         }
-
-
     }
 }

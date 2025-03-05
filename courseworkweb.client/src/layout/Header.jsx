@@ -11,55 +11,32 @@ export default function Header() {
         navigate('/');
     };
 
-    const handleLogInClick = () => {
-        navigate('/login');
-    };
-
-    const handleOrdersInfoInClick = () => {
-        navigate('/ordersinfo');
-    };
-
-    const handleUserInfoClick = () => {
-        navigate('/userinfo');
-    };
-
-    const handleComputerAddClick = () => {
-        navigate('/computerAdd');
-    };
-
-    const handleDeliveryAddClick = () => {
-        navigate('/deliveryAdd');
-    };
-
-    const handleRolesClick = () => {
-        navigate('/roles');
-    };
-
     return (
         <header className="header">
             <h1 className="logo">Computer Store</h1>
             <nav className="nav">
                 {user ? (
-                        <div className="button-container">
-                            <button onClick={() => navigate(-1)} className="nav-button">Go Back</button>
-                            <button onClick={handleOrdersInfoInClick} className="nav-button">Orders Info</button>
-                            <button onClick={handleUserInfoClick} className="nav-button">User Info</button>
-                            {(user.Roles.includes('Admin') || user.Roles.includes('Deliverer')) && (
-                                <button onClick={handleDeliveryAddClick} className="nav-button">Add Delivery</button>
-                            )}
-                            {user.Roles.includes('Admin') && (
-                                <button onClick={handleComputerAddClick} className="nav-button">Add Computer</button>
-                            )}
-                            {user.Roles.includes('Admin') && (
-                            <button onClick={handleRolesClick} className="nav-button">Roles</button>
-                            )}
-                            <button onClick={handleLogoutClick} className="nav-button">Logout</button>
-                        </div>
+                    <div className="button-container">
+                        <button onClick={() => navigate(-1)} className="nav-button">Go Back</button>
+                        <button onClick={() => navigate('/ordersinfo')} className="nav-button">Orders Info</button>
+                        <button onClick={() => navigate('/userinfo')} className="nav-button">User Info</button>
+                        <button onClick={() => navigate('/computerList')} className="nav-button">Computer List</button>
+                        {(user.Roles?.includes('Admin') || user.Roles?.includes('Deliverer')) && (
+                            <button onClick={() => navigate('/deliveryAdd')} className="nav-button">Add Delivery</button>
+                        )}
+                        {user.Roles?.includes('Admin') && (
+                            <>
+                                <button onClick={() => navigate('/computerAdd')} className="nav-button">Add Computer</button>
+                                <button onClick={() => navigate('/roles')} className="nav-button">Roles</button>
+                            </>
+                        )}
+                        <button onClick={handleLogoutClick} className="nav-button">Logout</button>
+                    </div>
                 ) : (
                     <div className="user-info">
-                        <span>Please log in to continue</span>
+                        <div>Please log in to continue</div>
                         <button onClick={() => navigate(-1)} className="nav-button">Go Back</button>
-                        <button onClick={handleLogInClick} className="nav-button">Log In</button>
+                        <button onClick={() => navigate('/login')} className="nav-button">Log In</button>
                     </div>
                 )}
             </nav>

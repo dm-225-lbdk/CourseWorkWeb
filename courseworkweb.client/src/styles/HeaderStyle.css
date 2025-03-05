@@ -14,10 +14,6 @@
     max-width: 100%;
 }
 
-.logo {
-    margin: 0;
-}
-
 .nav {
     display: flex;
     align-items: center;
@@ -52,5 +48,6 @@
     }
 
 body {
-    padding-top: 80px;
+    padding-top: 90vh;
+    padding-top: 90vh;
 }

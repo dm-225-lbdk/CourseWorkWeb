@@ -16,9 +16,9 @@ function App() {
     return (
         <AuthProvider>
             <Router>
-                <div style={contentStyle}>
+                <div>
                     <Header />
-                    <div style={mainContentStyle}>
+                    <div>
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/login" element={<Login />} />
@@ -36,19 +36,5 @@ function App() {
         </AuthProvider>
     );
 }
-
-const contentStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh',
-};
-
-const mainContentStyle = {
-    paddingTop: '80px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minHeight: '100vh',
-};
 
 export default App;
